@@ -26,6 +26,22 @@ public class Queue {
 		array[rear] = data;
 		count++;
 	}
+	
+	public void deQueue() {
+		if(isempty()) {
+			System.out.println("queue is empty");
+			return;
+		}
+		System.out.println("removing the element from queue");
+		front = (front+1)%capacity;
+		System.out.println("Front : " + front);
+		count--;
+	}
+
+	public boolean isempty() {
+
+		return size()==0;
+	}
 
 	public boolean isFull() {
 

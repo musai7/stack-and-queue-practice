@@ -1,7 +1,5 @@
 package com.bridgeit.stack;
 
-import java.util.Stack;
-
 public class StackPractice {
 	private static final int MAX = 10;
 	
@@ -33,5 +31,30 @@ public class StackPractice {
 	private boolean isFull() {
 		
 		return top >= array.length-1;
+	}
+	
+	public int pop() {
+		
+		if(isEmpty()) {
+			System.out.println("Stack is empty");
+			return 0;
+		}
+		int data = array[top--];
+		return data;
+	}
+	
+	public int peak() {
+		
+		if(isEmpty()) {
+			System.out.println("Stack is empty");
+			return 0;
+		}
+		int data = array[top];
+		return data;
+	}
+
+	public boolean isEmpty() {
+
+		return top<0;
 	}
 }
